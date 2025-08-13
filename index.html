@@ -2,45 +2,108 @@
 <html>
   <head>
     <title>About Ms. Kelley</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   </head>
 
-  <body>
+  <body class="bg-blue-50 text-gray-800 p-4 font-sans">
     <!-- All content goes here -->
-    <div id="all-contents">
-      <nav>
-        <h1>About Ms. Kelley
-        </h1>
-        <ul id="nav-ul">
-          <li class="nav-li">
-            <a href="index.html">Home</a>
-          </li>
-          <li class="nav-li">
-            <a href="portfolio.html">Portfolio</a>
-          </li>
-        </ul>
-      </nav>
-      <main>
-          <div class="sidebar">          
-          <img
-              class="sidebar-img" src="https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/533033079_10233176072558249_6882930203645610785_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=mkI77ZwMbwYQ7kNvwF1UeF2&_nc_oc=AdkEWN24Az7r1AMX-ABHIPJCzhuYrfe2Srb_dApC5qPDBMoJI4Dqt18glNJGjONz9w0&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=aUi0-1dgkWyQWG88aul15A&oh=00_AfXDyZ4Q-J1rlCGhnc0tlgPNvRvx1Mj3x9FemHqyOK2_fA&oe=68A13704" width="250">
-  </div>
+    <div id="all-contents" class="max-w-4xl mx-auto">
+      <nav class="bg-blue-500 p-4 rounded-lg mb-4 shadow-md">
+        <div class="flex justify-between items-center">
+          <h1 class="text-white text-2xl font-bold">About Ms. Kelley</h1>
+          <ul class="flex space-x-4">
+            <li>
+              <a
+                href="index.html"
+                class="text-white hover:text-blue-200 px-3 py-2 rounded"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="portfolio.html"
+                class="text-white hover:text-blue-200 px-3 py-2 rounded"
+                >Portfolio</a
+              >
+            </li>
+          </ul>
         </div>
-        <div class="content">
-          <h2>Ms. Laura Kelley</h2>
-          <p>Bonnabel High School Teacher</p>
-          <div id="interests">
-
-            <h3>Interests</h3>
-            <ul>
-              <li>Reading</li>
-              <li>Sewing</li>
-              <li>Disney</li>
-              <li>Crochet/ Knitting</li>
-            </ul>
-
+        <main class="bg-white rounded-lg shadow-lg p-6">
+          <div class="flex flex-col md:flex-row gap-6">
+            <!-- Sidebar with image -->
+            <div class="md:w-1/3">
+              <img
+                class="w-full max-w-xs rounded-lg shadow-md mx-auto"
+                src="https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/533033079_10233176072558249_6882930203645610785_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=mkI77ZwMbwYQ7kNvwF1UeF2&_nc_oc=AdkEWN24Az7r1AMX-ABHIPJCzhuYrfe2Srb_dApC5qPDBMoJI4Dqt18glNJGjONz9w0&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=aUi0-1dgkWyQWG88aul15A&oh=00_AfXDyZ4Q-J1rlCGhnc0tlgPNvRvx1Mj3x9FemHqyOK2_fA&oe=68A13704"
+                alt="Profile picture"
+              />
+            </div>
           </div>
-      </main>
+          <!-- Content section -->
+          <div class="md:w-2/3">
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">Ms. Kelley</h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Bonnabel High School Teacher
+            </p>
+            <!-- Interests section -->
+            <div class="border-2 border-gray-300 rounded-lg p-4">
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">
+                My Interests
+              </h3>
+              <ul class="space-y-2">
+                <li class="bg-blue-100 px-3 py-2 rounded text-blue-800">
+                  Reading
+                </li>
+                <li class="bg-pink-100 px-3 py-2 rounded text-pink-800">
+                  Sewing
+                </li>
+                <li class="bg-green-100 px-3 py-2 rounded text-green-800">
+                  Crochet & Knitting
+                </li>
+              </ul>
+            </div>
+            <!-- Add this in your content section Photo Gallery -->
+            <div class="mt-8">
+              <h3 class="text-2xl font-bold mb-4">My Photo Gallery</h3>
+              <div class="flex flex-wrap gap-4">
+                <img
+                  src="https://lh3.googleusercontent.com/pw/AP1GczNA1Qx8UsQmtLg3frGa253Vip_yfIuQUcAZh6toYk05QuXX0oSXZvrcUis0flyllCbrdBVeV2RHNaDyiMLLbnbNpsp5Q8-92HExY7akK3T1Z1zud248MqPzCXtz2scyaV-bQ0-gOB15Kp_cmvTfRUNGKQ=w442-h589-s-no-gm?authuser=0"
+                  alt="Claire & I Crusing"
+                  class="w-32 h-32 object-cover rounded-lg shadow-md"
+                />
+
+                <img
+                  src="https://lh3.googleusercontent.com/pw/AP1GczOlo2k28Gu6ckTK_DLbGm7mGOJjy2ujLW9gIYYJhkGenWl8Ov8BVZsc1qQnkzsgp_vfdPmiQIAxtZejwGyoRO_xAPK-JvBkYYnCvDMuiVM-P4b5SkkCcQl4MVVXWwBwsipdAAgCaQbOyUOQM9MeEFzGzQ=w671-h895-s-no-gm?authuser=0"
+                  alt="LilyKate"
+                  class="w-32 h-32 object-cover rounded-lg shadow-md"
+                />
+                <img
+                  src="https://lh3.googleusercontent.com/pw/AP1GczMcy_t__anVYcvRPaiLmwMwCvCwHXFIP9kjwKeQ78RtFg8w4Vv9mXu-zSf-cw6HpV1yaBOi2G8Cba36Tze3QsRBK36Dmb5-vkFreiVgjf0h_uBAbPlP516oYBxICyjqpDcfj52Q_XOHblekaogUtYYvKQ=w895-h895-s-no-gm?authuser=0"
+                  alt="Gavin Matthew"
+                  class="w-32 h-32 object-cover rounded-lg shadow-md"
+                />
+                <img
+                  src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/466730128_10229924807478654_2700850201056723811_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=669761&_nc_ohc=nWisk-QZE08Q7kNvwFKFssv&_nc_oc=AdlAkqnbhinvlvL4vehGIKQzhlJl1Xz_iRcVbqksFAVvTUn4QSEuqf-XTdxhrduXxV0&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=HFghFC9ELrqpkuqtVU7ktg&oh=00_AfXrE_WElcdUatoIFMo2eKcIABIKea_mKUGALvQ-6vwdcw&oe=68A2C8A3"
+                  alt="Family illustration"
+                  class="w-32 h-32 object-cover rounded-lg shadow-md"
+                />
+                <img
+                  src="https://lh3.googleusercontent.com/pw/AP1GczPXvrf89CoYizfWnATR3jLo4aFmCLeMTOCnRo1boZDi5z1Cl8CrsBHP9YllA5SItGG4bwVz_dNPGqmMyNN-n8dj3OI7byxONkrxP_noVTBl4pD6CmUx7d3xn7Q_1vsFiVO9WHIoHU6NCXVokerwxFtgLg=w447-h589-s-no-gm?authuser=0"
+                  alt="Crochet Chipmunk"
+                  class="w-32 h-32 object-cover rounded-lg shadow-md"
+                />
+                <img
+                  src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/464691572_10229593151187454_4254383999757414011_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=cf85f3&_nc_ohc=sRhiFdIryLIQ7kNvwF2ps24&_nc_oc=Adm3BxOQuzIjolSPGzNSSO1MP3GI4fSysYVULSuDDtyL6jAeFN_LIMpGXvxU4yBLXTs&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=Vjn3O3KsdgSTUY1dvk6VYA&oh=00_AfUv9eHFIl2oTZWNzRvN9PzZw3oKvJNI9PM_AEH-dsZwBQ&oe=68A2B2B3"
+                  alt="Knitted Blanket"
+                  class="w-32 h-32 object-cover rounded-lg shadow-md"
+                />
+              </div>
+            </div>
+          </div>
+        </main>
+      </nav>
     </div>
   </body>
 </html>
