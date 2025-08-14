@@ -2,41 +2,54 @@
 <html>
   <head>
     <title>Ms. Kelley's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <!--<link rel="stylesheet" href="style.css" /> -->
  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-  <body>
+  <body class="bg-blue-50 text-gray-800 p-4 font-sans">
     <!-- All content goes here -->
-    <div id="all-contents"></div>
-   <nav>
-<h1>Ms. Kelley's Portfolio</h1>
-<ul id="nav-ul">
-<li class="nav-li">
-  <a href="index.html">Home</a>
-</li>
-<li class="nav-li">
-  <a href="portfolio.html">Portfolio</a>
-</li>
-</ul>
-  </nav>
-
-  <main>
-  <div class="content">
-    <h1>Portfolio</h1>
+    <div id="all-contents" class="max-w-4xl mx-auto">
+      <nav class="bg-blue-500 p-4 rounded-lg mb-4 shadow-md">
+        <div class="flex justify-between items-center">
+          <h1 class="text-white text-2xl font-bold">Ms. Kelley's Portfolio</h1>
+          <ul class="flex space-x-4">
+            <li>
+              <a
+                href="index.html"
+                class="text-white hover:text-blue-200 px-3 py-2 rounded"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="portfolio.html"
+                class="text-white hover:text-blue-200 px-3 py-2 rounded"
+                >Portfolio</a>
+            </li>
+          </ul>
+        </div>
+  
+ <main class="bg-white rounded-lg shadow-lg p-6">
+          <div class="flex flex-col md:flex-row gap-6">    
     <ul id="portfolio">
-     <li>
-  <a href="fsd-projects/platformer/">Platformer: A cannon-dodging adventure game for Halleb0t</a>
-</li>
-<li>
-  <a href="fsd-projects/bouncing-box/">Bouncing Box: A fun introduction to web game development</a>
-</li>
-<li>
-  <a href="fsd-projects/circularity/">Circularity: A poetic motion experiment with circles</a>
-</li>   
-
-    </ul>
-  </div>
+       <div class="border-0 border-gray-300 rounded-lg p-4">
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">
+             Portfolio
+              </h3>
+              <ul class="space-y-2">
+                <li class="bg-blue-100 px-3 py-2 rounded text-blue-800">
+                   <a href="fsd-projects/platformer/">Platformer: <br> A cannon-dodging adventure game for Halleb0t</a>
+                </li>
+                <li class="bg-blue-100 px-3 py-2 rounded text-blue-800">
+                 <a href="fsd-projects/bouncing-box/">Bouncing Box: <br>A fun introduction to web game development</a>
+                </li>
+                <li class="bg-blue-100 px-3 py-2 rounded text-blue-800">
+                <a href="fsd-projects/circularity/">Circularity: <br> A poetic motion experiment with circles</a>
+                </li>
+              </ul>
+            </div>
 </main>
-</div></body>
+
+</body>
 </html>

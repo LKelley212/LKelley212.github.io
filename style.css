@@ -69,10 +69,10 @@ a {
 
 /* main container area beneath menu */
 main {
-  background: rgb(245, 238, 219);
+  background: #ffffff;
   display: flex;
   margin-top: 20px;
- fill-opacity: 0.35; 
+
 }
 div.transbox {
   margin: 30px;
