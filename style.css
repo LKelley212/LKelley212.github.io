@@ -1,4 +1,4 @@
-body body {
+body {
   background: hsla(217, 100%, 50%, 1);
 
   background: linear-gradient(
@@ -71,8 +71,8 @@ a {
 main {
   background: #ffffff;
   display: flex;
+  fill-opacity: 50;
   margin-top: 20px;
-
 }
 div.transbox {
   margin: 30px;
@@ -104,6 +104,29 @@ h2,
 h3 {
   margin: 0px;
 }
+
+/* Image Gallery Styles */
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
 /* Portfolio styles */
 .content h1 {
   color: black;
