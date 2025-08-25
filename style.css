@@ -71,7 +71,6 @@ a {
 main {
   background: #ffffff;
   display: flex;
-  fill-opacity: 50;
   margin-top: 20px;
 }
 div.transbox {
