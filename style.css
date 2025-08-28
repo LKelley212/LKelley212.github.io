@@ -1,29 +1,6 @@
 body {
-  background: hsla(217, 100%, 50%, 1);
-
-  background: linear-gradient(
-    90deg,
-    hsla(217, 100%, 50%, 1) 0%,
-    hsla(186, 100%, 69%, 1) 100%
-  );
-
-  background: -moz-linear-gradient(
-    90deg,
-    hsla(217, 100%, 50%, 1) 0%,
-    hsla(186, 100%, 69%, 1) 100%
-  );
-
-  background: -webkit-linear-gradient(
-    90deg,
-    hsla(217, 100%, 50%, 1) 0%,
-    hsla(186, 100%, 69%, 1) 100%
-  );
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
-}
-
- {
-  color: #0353a4;
+  background: rgb(255, 255, 255);
+  color: rgb(45, 45, 45);
   padding: 10px;
   font-family: Arial, sans-serif;
 }
@@ -32,14 +9,39 @@ body {
   max-width: 800px;
   margin: auto;
 }
-
+/*Grid Layout CSS*/
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "menu content"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  padding: 5px;
+}
+.container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+}
+.container > div.header {
+  grid-area: header;
+}
+.container > div.menu {
+  grid-area: menu;
+  place-items: center;
+}
+.container > div.content {
+  grid-area: content;
+}
+.container > div.footer {
+  grid-area: footer;
+}
 /* navigation menu */
 nav {
-  background: #061a40;
+  background: rgb(86, 22, 234);
   margin: 0 auto;
   display: flex;
   padding: 10px;
-  margin-bottom: 20px;
 }
 
 h1 {
@@ -69,15 +71,12 @@ a {
 
 /* main container area beneath menu */
 main {
-  background: #ffffff;
+  background: rgb(255, 253, 248);
   display: flex;
+  fill-opacity: 50;
   margin-top: 20px;
 }
-div.transbox {
-  margin: 30px;
-  background-color: #ffffff;
-  opacity: 0.6;
-}
+
 .sidebar {
   margin-right: 25px;
   padding: 10px;
@@ -94,7 +93,7 @@ div.transbox {
 
 /* interests section styles */
 #interests {
-  border: 4px #003559 ridge;
+  border: 4px silver ridge;
   padding: 8px;
   margin-top: 20px;
 }
@@ -103,8 +102,7 @@ h2,
 h3 {
   margin: 0px;
 }
-
-/* Image Gallery Styles */
+/* Photo Gallery section styles */
 div.gallery {
   margin: 5px;
   border: 1px solid #ccc;
@@ -124,79 +122,4 @@ div.gallery img {
 div.desc {
   padding: 15px;
   text-align: center;
-}
-
-/* Portfolio styles */
-.content h1 {
-  color: black;
-}
-
-#portfolio {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-#portfolio li {
-  background: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-#portfolio li:hover {
-  background: #eee;
-}
-
-#portfolio a {
-  text-decoration: none;
-  color: #454545;
-}
-/* responsive web design */
-@media screen and (min-width: 120px) and (max-width: 1080px) {
-  main {
-    height: 100ch;
-    zoom: 1.5;
-    display: grid;
-  }
-
-  h1 {
-    font-size: 44px;
-  }
-
-  h2 {
-    font-size: 42px;
-  }
-
-  h3 {
-    font-size: 36px;
-  }
-
-  #all-contents {
-    height: 100ch;
-    margin: none;
-  }
-
-  a {
-    font-size: 42px;
-  }
-
-  .sidebar {
-    margin-right: 0px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .sidebar-img {
-    width: 100%;
-  }
-
-  p,
-  li {
-    font-size: 24px;
-  }
-
-  .content {
-    align-content: center;
-    justify-content: center;
-  }
 }
