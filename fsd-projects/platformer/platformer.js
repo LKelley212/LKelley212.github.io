@@ -40,9 +40,9 @@ $(function () {
     createPlatform(350, 200, 300, 20, "hotpink");
     // TODO 3 - Create Collectables
     // createCollectable("Type", "X, Y, gravity, bounce")
-    createCollectable("grace", 1250, 220, 0.5, 0.5);
-    createCollectable("diamond", 505, 150, 0.7, 0.5);
-    createCollectable("kennedi", 200, 450, 0.5, 0.5);
+    createCollectable("heartGem", 1250, 220, 0.5, 0.5);
+    createCollectable("roundGem", 505, 150, 0.7, 0.5);
+    createCollectable("starGem", 200, 450, 0.5, 0.5);
 
     // TODO 4 - Create Cannons
 
