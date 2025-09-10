@@ -45,6 +45,9 @@ $(function () {
     createCollectable("starGem", 200, 450, 0.5, 0.5);
 
     // TODO 4 - Create Cannons
+    createCannon("right", 700, 1350);
+    createCannon("bottom", 1200 , 500, 2000);
+
 
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //
