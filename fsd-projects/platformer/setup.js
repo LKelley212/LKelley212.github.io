@@ -101,4 +101,5 @@ var collectableList = {
   heartGem: { image: "images/collectables/heartGem.png" },
   roundGem: { image: "images/collectables/roundGem.png" },
   starGem: { image: "images/collectables/starGem.png" },
+  winner: { image: "images/collectables/winner.png" },
 };

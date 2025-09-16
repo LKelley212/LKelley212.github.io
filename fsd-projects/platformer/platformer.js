@@ -47,7 +47,7 @@ $(function () {
     createCollectable("starGem", 505, 150, 0.7, 0.5);
     createCollectable("heartGem", 850, 220, 0.5, 0.5);
     createCollectable("starGem", 1200, 220, 0.5, 0.5);
-    createCollectable("database", 1350, 100);
+    createCollectable("winner", 1350, 100);
     // TODO 4 - Create Cannons
     createCannon("right", 700, 1500);
     createCannon("bottom", 1200, 1000);
