@@ -2,9 +2,6 @@
 git clone https://github.com/$1/asd
 
 # remove git references from cloned repo
-cd asd
-rm -rf .git*
-cd ..
 
 # create subfolders in project-instructions folder
 mv project-instructions fsd
