@@ -43,21 +43,34 @@ $(document).ready(function () {
   dataShapes.push(shape);
   // TODO 0 complete
   // TODO 2: add a new property to all data shapes
-  for (color in dataShapes) {
-    var currentShape = {};
-    if (dataShapes[color] === "red") {
-      dataShapes.push[goodBehavior] = "bounce";
-    } else if (dataShapes[color] === "blue") {
-      dataShapes.push[goodBehavior] = "blink";
+  for (var i = 0; i <= dataShapes.length - 1; i++) {
+    var currentShape = dataShapes[i];
+    if (currentShape.color === "red") {
+      currentShape.goodBehavior = "bounce";
+    } else if (dataShapes.color === "blue") {
+      currentShape.goodBehavior = "blink";
     } else {
-      dataShapes[goodBehavior] = "spin";
+      currentShape.goodBehavior = "spin";
     }
   }
   // TODO 3-a: add a function that handles the static display type
+  function handleStatic(data) {
+    setBackgroundWithObject(data);
+    animationDetails.displayType = 1;
+  }
 
   // TODO 4-a: add a function that handles the good display type
+  function handleGood(color, shape, repeat) {
+    setBackgroundWithSimple(color, shape, repeat);
+    animationDetails.displayType = 2;
+  }
 
   // TODO 5-a: add a function that handles the bad display type
+  function handleBad(data, repeat) {
+    repeat = repeat + 1;
+    setBackgroundWithMixed(data, repeat);
+    animationDetails.displayType = 3;
+  }
 
   /////////////////////////////////////////////////
   // BUTTON HANDLERS BELOW HERE (3-b, 4-b, 5-b) ///
@@ -65,14 +78,20 @@ $(document).ready(function () {
 
   function staticDisplay() {
     // TODO 3-b: call your handleStatic function
+    handleStatic(currentShape);
   }
 
   function goodDisplay() {
     // TODO 4-b: call your handleGood function
+    var currentShape = dataShapes[currentIndex];
+    handleGood(currentShape.color, currentShape.shape, currentShape.repeat);
   }
 
   function badDisplay() {
     // TODO 5-b: call your handleBad function
+    var currentShape = dataShapes[currentIndex];
+    var repeat = currentShape.repeat;
+    handleBad(currentShape, repeat);
   }
 
   /////////////////////////////////////////////////
