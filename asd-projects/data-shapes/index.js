@@ -47,7 +47,7 @@ $(document).ready(function () {
     var currentShape = dataShapes[i];
     if (currentShape.color === "red") {
       currentShape.goodBehavior = "bounce";
-    } else if (dataShapes.color === "blue") {
+    } else if (currentShape.color === "blue") {
       currentShape.goodBehavior = "blink";
     } else {
       currentShape.goodBehavior = "spin";
@@ -78,6 +78,7 @@ $(document).ready(function () {
 
   function staticDisplay() {
     // TODO 3-b: call your handleStatic function
+    var currentShape = dataShapes[currentIndex];
     handleStatic(currentShape);
   }
 
