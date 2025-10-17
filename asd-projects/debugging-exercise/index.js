@@ -128,7 +128,7 @@ $(document).ready(function () {
 
   // this moves ghosts in memory but doesn't update them on the screen
   function moveGhost(ghost) {
-    ghost.x = ghost.speedX;
+    ghost.x += ghost.speedX;
     ghost.y += ghost.speedY;
   }
 
@@ -152,14 +152,12 @@ $(document).ready(function () {
     // this bounces off the bottom wall
     else if (ghost.y > boardHeight) {
       ghost.y -= ghost.speedY;
-      ghost.speedX *= -1;
+      ghost.speedY *= -1;
     }
   }
 
   // this redraws the ghost's position on the screen
   function updateGhostOnScreen(ghost) {
-    maxGhosts = 0;
-
     // these lines redraw the ghost's position
     $(ghost.id).css("left", ghost.x);
     $(ghost.id).css("top", ghost.y);
