@@ -1,6 +1,59 @@
 #die {
-  height: 100px;
-  width: 100px;
-  background-color: lightgray; /* Feel free to customize */
+  height: 115px;
+  width: 115px;
+  /* background-color: rgb(62, 112, 250); Feel free to customize */
   position: relative;
+  border-radius: 15px; /* Adjust the value for desired roundness */
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(99, 101, 224);
+  background: hsla(233, 100%, 90%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(233, 100%, 90%, 1) 0%,
+    hsla(0, 0%, 89%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(233, 100%, 90%, 1) 0%,
+    hsla(0, 0%, 89%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(233, 100%, 90%, 1) 0%,
+    hsla(0, 0%, 89%, 1) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#CAD0FF", endColorstr="#E3E3E3", GradientType=1 );
+}
+#die2 {
+  height: 115px;
+  width: 115px;
+  /* background-color: rgb(62, 112, 250); Feel free to customize */
+  position: relative;
+  border-radius: 15px; /* Adjust the value for desired roundness */
+  border-color: hsla(214, 92%, 47%, 1);
+  border-width: 3px;
+  border-style: solid;
+  background: hsla(214, 92%, 47%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(214, 92%, 47%, 1) 0%,
+    hsla(231, 85%, 24%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(214, 92%, 47%, 1) 0%,
+    hsla(231, 85%, 24%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(214, 92%, 47%, 1) 0%,
+    hsla(231, 85%, 24%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0968E5", endColorstr="#091970", GradientType=1 );
 }
