@@ -212,14 +212,16 @@ function hasCollidedWithSnake() {
     HINT: Each part of the snake's body is stored in the snake.body Array. The
     head and each part of the snake's body also knows its own row and column.
   */
-       for (var i = 1; i < snake.length; i++) {
-        var currentSquare = snake.body[i];
-        if (currentSquare.row === snake.head.row &&
-            currentSquare.column === snake.head.column){
-            return true;
-        }
+  for (var i = 1; i < snake.length; i++) {
+    var currentSquare = snake.body[i];
+    if (
+      currentSquare.row === snake.head.row &&
+      currentSquare.column === snake.head.column
+    ) {
+      return true;
     }
-    return false;
+  }
+  return false;
 }
 
 function endGame() {
@@ -289,10 +291,11 @@ function makeSnakeSquare(row, column) {
   // add the square to the snake’s body and update the tail
   snake.body.push(snakeSquare);
   snake.tail = snakeSquare;
-  
+
   // add colors to the tail
-  snake.tail.element.css("backgroundColor", colors[[colorIndex]])
-colorIndex = (colorIndex + 1) % colors.length;}
+  snake.tail.element.css("backgroundColor", colors[[colorIndex]]);
+  colorIndex = (colorIndex + 1) % colors.length;
+}
 
 /* 
   event.which returns the keycode of the key that is pressed when the
@@ -353,13 +356,16 @@ function getRandomAvailablePosition() {
       not occupied by a snakeSquare in the snake's body. If it is then set 
       spaceIsAvailable to false so that a new position is generated.
     */
-   for(var i = 0, i < snake.body.length, i++){
-    var snakePart = snake.body[i];
-    if (snakePart.column === randomPosition.column && snakePart.row === randomPosition.row){
-      //Position is taken by the snake
-      spaceIsAvailable = false;
+    for (var i = 0; i < snake.body.length; i++) {
+      var snakePart = snake.body[i];
+      if (
+        snakePart.column === randomPosition.column &&
+        snakePart.row === randomPosition.row
+      ) {
+        //Position is taken by the snake
+        spaceIsAvailable = false;
+      }
     }
-   }
   }
   return randomPosition;
 }
