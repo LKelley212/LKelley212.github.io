@@ -12,8 +12,17 @@ var highScoreElement = $("#highScore");
 // Game Variables
 var score = 0; // variable to keep track of the score
 var started = false; // variable to keep track of whether the game has started
-var colors = ["red", "orange", "yellow", "green", "blue", "purple"];
-var colorIndex;
+var colors = [
+  "#FF595E", // red
+  "#f58428", // orange
+  "#FFCA3A", // yellow
+  "#8AC926", // green
+  "#00CED1", // cyan (dark turquoise / bright cyan)
+  "#1982C4", // blue
+  "#6A4C93", // purple
+  "#FF77AA", // pink (soft vivid pink)
+];
+var colorIndex = 0;
 
 // TODO 4, Part 1: Create the apple variable
 const apple = {};
@@ -251,7 +260,18 @@ function endGame() {
 function makeApple() {
   // TODO 4, Part 2: Fill in this function's code block
   // make the apple jQuery Object and append it to the board
-  apple.element = $("<div>").addClass("apple").appendTo(board);
+  //apple.element = $("<div>").addClass("apple").appendTo(board);
+
+  //Use an image instead of a red square
+
+  apple.element = $("<div>")
+    .addClass("apple")
+    .css({
+      backgroundImage: "url('SimpleRed-Apple.png')",
+      backgroundSize: "cover", // makes it fit the square
+      backgroundPosition: "center",
+    })
+    .appendTo(board);
 
   // get a random available row/column on the board
   var randomPosition = getRandomAvailablePosition();
@@ -293,7 +313,7 @@ function makeSnakeSquare(row, column) {
   snake.tail = snakeSquare;
 
   // add colors to the tail
-  snake.tail.element.css("backgroundColor", colors[[colorIndex]]);
+  snake.tail.element.css("backgroundColor", colors[colorIndex]);
   colorIndex = (colorIndex + 1) % colors.length;
 }
 
