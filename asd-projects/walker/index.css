@@ -1,6 +1,5 @@
-
 body {
-  background-color: darkgreen;
+  background-color: #0974f1;
 }
 
 #board {
@@ -11,11 +10,35 @@ body {
   position: relative;
 }
 
-#gameItem {
-  background-color: teal;
+#walker {
+  /* background-color: rgb(1, 60, 255); */
+  background: hsla(303, 79%, 76%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(303, 79%, 76%, 1) 0%,
+    hsla(360, 86%, 67%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(303, 79%, 76%, 1) 0%,
+    hsla(360, 86%, 67%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(303, 79%, 76%, 1) 0%,
+    hsla(360, 86%, 67%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F292ED", endColorstr="#F36364", GradientType=1 );
+
   width: 50px;
   height: 50px;
+  border-radius: 25px;
   position: absolute;
-/*   left: 100px; */  /* Uncomment if you want to set a "starting" position */
-/*   top: 100px;  */  /* Uncomment if you want to set a "starting" position */
+
+  /*   left: 100px; */ /* Uncomment if you want to set a "starting" position */
+  /*   top: 100px;  */ /* Uncomment if you want to set a "starting" position */
 }
