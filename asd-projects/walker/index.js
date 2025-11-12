@@ -61,19 +61,19 @@ function runProgram() {
   function handleKeyDown(event) {
     console.log(event.which);
     if (event.which === KEY.LEFT) {
-      walker.speedX -= 5;
+      walker.speedX = -5;
       console.log("left pressed");
     }
     if (event.which === KEY.UP) {
-      walker.speedY -= 5;
+      walker.speedY = -5;
       console.log("up pressed");
     }
     if (event.which === KEY.RIGHT) {
-      walker.speedX += 5;
+      walker.speedX = 5;
       console.log("right pressed");
     }
     if (event.which === KEY.DOWN) {
-      walker.speedY += 5;
+      walker.speedY = 5;
       console.log("down pressed");
     }
   }
