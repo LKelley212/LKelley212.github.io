@@ -21,7 +21,7 @@ function resetAndRender() {
 function applyAndRender() {
   // Multiple TODOs: Call your apply function(s) here
   // applyFilter(increaseGreenByBlue);
-  applyFilterNoBackground(reddify);
+  applyFilterNoBackground(decreaseBlue);
   // do not change the below line of code
   render($("#display"), image);
 }
@@ -62,7 +62,7 @@ function applyFilterNoBackground(filterFunction) {
       var pixel = image[i][j];
       // If the pixel array is not equal to the background color, apply the filter
       if (pixel !== backgroundColor) {
-        var pixelArray = rgbStringToArray(pixel);
+        var pixelArray = rgbStringToArray(pixelArray);
         filterFunction(pixelArray);
       }
 
@@ -71,6 +71,7 @@ function applyFilterNoBackground(filterFunction) {
     }
   }
 }
+
 // TODO 6: Create the keepInBounds function
 function keepInBounds(num) {
   return num < 0 ? (num = 0) : num > 255 ? 255 : num;
