@@ -1,170 +1,404 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>Ms. Kelley's Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ms. Kelley’s Coding Adventures — Portfolio</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
 
-  <body class="bg-blue-50 text-gray-800 p-4 font-sans">
-    <div id="all-contents" class="max-w-4xl mx-auto">
-      <!-- NAVIGATION -->
-      <nav class="bg-blue-500 p-4 rounded-lg mb-4 shadow-md">
-        <div class="flex justify-between items-center">
-          <h1 class="text-white text-2xl font-bold">Ms. Kelley's Portfolio</h1>
-          <ul class="flex space-x-4">
-            <li>
-              <a
-                href="index.html"
-                class="text-white hover:text-blue-200 px-3 py-2 rounded"
-                >Home</a
+  <body class="bg-blue-50 text-gray-800 font-sans p-6">
+    <!-- NAVIGATION -->
+    <nav
+      class="bg-blue-500 text-white p-4 flex justify-between items-center rounded-lg shadow-md mb-8"
+    >
+      <h1 class="text-2xl font-bold">Ms. Kelley’s Coding Adventures</h1>
+      <ul class="flex space-x-4">
+        <li><a href="index.html" class="hover:text-blue-200">Home</a></li>
+        <li>
+          <a href="portfolio.html" class="hover:text-blue-200">Portfolio</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="max-w-4xl mx-auto space-y-10">
+      <!-- PAGE TITLE -->
+      <section class="bg-white rounded-lg shadow-lg p-6">
+        <h2 class="text-3xl font-bold mb-2">Portfolio</h2>
+        <p class="text-gray-600">
+          A collection of coding projects created by Ms. Kelley.
+        </p>
+      </section>
+
+      <!-- Advanced (IN PROGRESS) -->
+      <section class="bg-white rounded-lg shadow-lg p-6 space-y-4">
+        <h3 class="text-2xl font-semibold text-gray-800">
+          Advanced (IN PROGRESS)
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <a
+            href="asd-projects/data-shapesBlank/"
+            class="block bg-blue-100 p-4 rounded-lg shadow hover:shadow-md hover:bg-blue-200 transition"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-blue-700"
+                viewBox="0 0 20 20"
+                fill="currentColor"
               >
-            </li>
-            <li>
-              <a
-                href="portfolio.html"
-                class="text-white hover:text-blue-200 px-3 py-2 rounded"
-                >Portfolio</a
-              >
-            </li>
-          </ul>
+                <path
+                  d="M4 3h4v4H4V3zm6 0h4v4h-4V3zM4 9h4v4H4V9zm6 0h4v4h-4V9z"
+                />
+              </svg>
+              <p class="font-semibold text-blue-900">Data Shapes Practice</p>
+            </div>
+
+            <p class="text-sm text-gray-700 mt-1">
+              Exploring patterns with code.
+            </p>
+          </a>
         </div>
-      </nav>
+      </section>
 
-      <!-- MAIN CONTENT -->
-      <main class="bg-white rounded-lg shadow-lg p-6">
-        <h2 class="text-2xl font-bold mb-4">Portfolio</h2>
+      <!-- FUNDAMENTALS PROJECTS -->
+      <section class="bg-white rounded-lg shadow-lg p-6 space-y-4">
+        <h3 class="text-2xl font-semibold text-gray-800">
+          Fundamentals Projects
+        </h3>
 
-        <!-- BEGIN PORTFOLIO LIST -->
-        <ul id="portfolio" class="space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <a
+            href="fsd-projects/platformer/"
+            class="block bg-blue-100 p-4 rounded-lg shadow hover:shadow-md hover:bg-blue-200 transition"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-blue-700"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M3 12h18m-6 6H9m6-12H9"
+                />
+              </svg>
+              <p class="font-semibold text-blue-900">Platformer</p>
+            </div>
+
+            <p class="text-sm text-gray-700 mt-1">
+              A cannon-dodging adventure game.
+            </p>
+          </a>
+
+          <a
+            href="fsd-projects/bouncing-box/"
+            class="block bg-blue-100 p-4 rounded-lg shadow hover:shadow-md hover:bg-blue-200 transition"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-blue-700"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <circle cx="12" cy="12" r="5" stroke-width="1.5" />
+              </svg>
+              <p class="font-semibold text-blue-900">Bouncing Box</p>
+            </div>
+
+            <p class="text-sm text-gray-700 mt-1">
+              An intro to web game development.
+            </p>
+          </a>
+
+          <a
+            href="fsd-projects/circularity/"
+            class="block bg-blue-100 p-4 rounded-lg shadow hover:shadow-md hover:bg-blue-200 transition"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-blue-700"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <circle cx="12" cy="12" r="9" stroke-width="1.5" />
+              </svg>
+              <p class="font-semibold text-blue-900">Circularity</p>
+            </div>
+
+            <p class="text-sm text-gray-700 mt-1">
+              A poetic motion experiment with circles.
+            </p>
+          </a>
+        </div>
+      </section>
+
+      <!-- ADVANCED PROJECTS -->
+      <section class="bg-white rounded-lg shadow-lg p-6 space-y-4">
+        <h3
+          class="text-2xl font-semibold text-gray-800 flex items-center gap-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-7 h-7 text-blue-600"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M3 7.5l9-4.5 9 4.5m-18 0l9 4.5 9-4.5m-18 0v9l9 4.5m9-13.5v9m-9 4.5v-9"
+            />
+          </svg>
+          Advanced Projects
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <!-- Data Shapes -->
-          <li class="border border-gray-300 rounded-lg p-4">
-            <h3 class="text-xl font-semibold mb-2 text-gray-800">
-              Data Shapes (In Progress)
-            </h3>
-            <a
-              href="asd-projects/data-shapesBlank/"
-              class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
-            >
-              Data Shapes Practice with Patterns
-            </a>
-          </li>
+          <a
+            href="asd-projects/data-shapes"
+            class="block bg-blue-100 p-4 rounded-lg shadow hover:shadow-md hover:bg-blue-200 transition"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-blue-700"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M4 3h4v4H4V3zm6 0h4v4h-4V3zM4 9h4v4H4V9zm6 0h4v4h-4V9z"
+                />
+              </svg>
+              <p class="font-semibold text-blue-900">Data Shapes</p>
+            </div>
 
-          <!-- Fundamentals Projects -->
-          <li class="border border-gray-300 rounded-lg p-4">
-            <h3 class="text-xl font-semibold mb-2 text-gray-800">
-              Fundamentals Projects
-            </h3>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="fsd-projects/platformer/"
-                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
-                >
-                  Platformer:<br />A cannon-dodging adventure game for Halleb0t
-                </a>
-              </li>
+            <p class="text-sm text-gray-700 mt-1">
+              Explore advanced patterns using loops and structured data.<br />
+              A creative jump into algorithmic art.
+            </p>
+          </a>
 
-              <li>
-                <a
-                  href="fsd-projects/bouncing-box/"
-                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
-                >
-                  Bouncing Box:<br />A fun introduction to web game development
-                </a>
-              </li>
+          <!-- Debugging Exercise -->
+          <a
+            href="asd-projects/debugging-exercise"
+            class="block bg-blue-100 p-4 rounded-lg shadow hover:shadow-md hover:bg-blue-200 transition"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-blue-700"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <p class="font-semibold text-blue-900">Debugging Exercise</p>
+            </div>
 
-              <li>
-                <a
-                  href="fsd-projects/circularity/"
-                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
-                >
-                  Circularity:<br />A poetic motion experiment with circles
-                </a>
-              </li>
-            </ul>
-          </li>
+            <p class="text-sm text-gray-700 mt-1">
+              Practice finding and fixing broken code.<br />
+              Strengthens logical thinking and debugging skills.
+            </p>
+          </a>
 
-          <!-- Advanced Projects -->
-          <li class="border border-gray-300 rounded-lg p-4">
-            <h3 class="text-xl font-semibold mb-2 text-gray-800">
-              Advanced Projects
-            </h3>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="asd-projects/data-shapes"
-                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
-                  >Data Shapes</a
-                >
-              </li>
-              <li>
-                <a
-                  href="asd-projects/debugging-exercise"
-                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
-                  >Debugging Exercise</a
-                >
-              </li>
-              <li>
-                <a
-                  href="asd-projects/snake"
-                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
-                  >Snake</a
-                >
-              </li>
-              <li>
-                <a
-                  href="asd-projects/walker"
-                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
-                  >Walker</a
-                >
-              </li>
-              <li>
-                <a
-                  href="asd-projects/image-filtering"
-                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
-                  >Image Filtering</a
-                >
-              </li>
-              <li>
-                <a
-                  href="asd-projects/sorting"
-                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
-                  >Sorting Exercise</a
-                >
-              </li>
-            </ul>
-          </li>
+          <!-- Snake -->
+          <a
+            href="asd-projects/snake"
+            class="block bg-blue-100 p-4 rounded-lg shadow hover:shadow-md hover:bg-blue-200 transition"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-blue-700"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M12 6v6l4 2m5-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <p class="font-semibold text-blue-900">Snake</p>
+            </div>
 
-          <!-- Mini Projects -->
-          <li class="border border-gray-300 rounded-lg p-4">
-            <h3 class="text-xl font-semibold mb-2 text-gray-800">
-              Mini Projects
-            </h3>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="asd-projects/dice-app"
-                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
-                >
-                  Dice App:<br />A simple, interactive dice app built using
-                  jQuery
-                </a>
-              </li>
+            <p class="text-sm text-gray-700 mt-1">
+              Build the classic arcade-style Snake game.<br />
+              Learn movement, timing, and collision logic.
+            </p>
+          </a>
 
-              <li>
-                <a
-                  href="https://lkelley212.my.canva.site/schoolcountdown"
-                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
-                >
-                  School Countdown:<br />A simple countdown widget made with
-                  Canva Code
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </main>
+          <!-- Walker -->
+          <a
+            href="asd-projects/walker"
+            class="block bg-blue-100 p-4 rounded-lg shadow hover:shadow-md hover:bg-blue-200 transition"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-blue-700"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+              <p class="font-semibold text-blue-900">Walker</p>
+            </div>
+
+            <p class="text-sm text-gray-700 mt-1">
+              Animate objects that respond to user input.<br />
+              A fun way to understand motion and interactivity.
+            </p>
+          </a>
+
+          <!-- Image Filtering -->
+          <a
+            href="asd-projects/image-filtering"
+            class="block bg-blue-100 p-4 rounded-lg shadow hover:shadow-md hover:bg-blue-200 transition"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-blue-700"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M3 5h18M3 12h18M3 19h18"
+                />
+              </svg>
+              <p class="font-semibold text-blue-900">Image Filtering</p>
+            </div>
+
+            <p class="text-sm text-gray-700 mt-1">
+              Modify images pixel-by-pixel using loops.<br />
+              Create custom filters like blur, tint, and contrast.
+            </p>
+          </a>
+
+          <!-- Sorting Exercise -->
+          <a
+            href="asd-projects/sorting"
+            class="block bg-blue-100 p-4 rounded-lg shadow hover:shadow-md hover:bg-blue-200 transition"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-blue-700"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M4 6h16M8 12h12M12 18h8"
+                />
+              </svg>
+              <p class="font-semibold text-blue-900">Sorting Exercise</p>
+            </div>
+
+            <p class="text-sm text-gray-700 mt-1">
+              Explore sorting algorithms through hands-on coding.<br />
+              Understand how computers organize information.
+            </p>
+          </a>
+        </div>
+      </section>
+
+      <!-- MINI PROJECTS -->
+      <section class="bg-white rounded-lg shadow-lg p-6 space-y-4">
+        <h3 class="text-2xl font-semibold text-gray-800">Mini Projects</h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <a
+            href="asd-projects/dice-app"
+            class="block bg-blue-100 p-4 rounded-lg shadow hover:shadow-md hover:bg-blue-200 transition"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-blue-700"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <circle cx="12" cy="12" r="4" stroke-width="1.5" />
+              </svg>
+              <p class="font-semibold text-blue-900">Dice App</p>
+            </div>
+
+            <p class="text-sm text-gray-700 mt-1">
+              A simple interactive dice roller.
+            </p>
+          </a>
+
+          <a
+            href="countdown.html"
+            class="block bg-blue-100 p-4 rounded-lg shadow hover:shadow-md hover:bg-blue-200 transition"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-blue-700"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M12 6v6l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <p class="font-semibold text-blue-900">School Countdown</p>
+            </div>
+
+            <p class="text-sm text-gray-700 mt-1">
+              A simple countdown widget made TailwindCSS and JavaScript.
+            </p>
+          </a>
+        </div>
+      </section>
     </div>
+
+    <!-- FOOTER -->
+    <footer class="text-center text-sm text-gray-500 mt-12">
+      © 2026 Ms. Kelley’s Portfolio
+    </footer>
   </body>
 </html>

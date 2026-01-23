@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Countdown</title>
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+      .float {
+        animation: float 3s ease-in-out infinite;
+      }
+    </style>
+
+    <script>
+      const SETTINGS = {
+        schoolLastDay: new Date(2026, 4, 21),
+        seniorLastDay: new Date(2026, 4, 1),
+        schoolStart: new Date(2025, 7, 8),
+
+        holidays: [
+          new Date(2025, 8, 1),
+          new Date(2025, 8, 15),
+          new Date(2025, 9, 10),
+          new Date(2025, 9, 13),
+          new Date(2025, 10, 3),
+          new Date(2025, 10, 24),
+          new Date(2025, 10, 25),
+          new Date(2025, 10, 26),
+          new Date(2025, 10, 27),
+          new Date(2025, 10, 28),
+          new Date(2025, 11, 22),
+          new Date(2025, 11, 23),
+          new Date(2025, 11, 24),
+          new Date(2025, 11, 25),
+          new Date(2025, 11, 26),
+          new Date(2025, 11, 27),
+          new Date(2025, 11, 28),
+          new Date(2025, 11, 29),
+          new Date(2025, 11, 30),
+          new Date(2025, 11, 31),
+          new Date(2026, 0, 1),
+          new Date(2026, 0, 2),
+          new Date(2026, 0, 5),
+          new Date(2026, 0, 19),
+          new Date(2026, 1, 13),
+          new Date(2026, 1, 14),
+          new Date(2026, 1, 17),
+          new Date(2026, 1, 18),
+          new Date(2026, 1, 19),
+          new Date(2026, 1, 20),
+          new Date(2026, 2, 13),
+          new Date(2026, 3, 3),
+          new Date(2026, 3, 4),
+          new Date(2026, 3, 7),
+        ],
+      };
+
+      const BREAKS = [
+        { name: "Fall Break", date: new Date(2025, 9, 13) },
+        { name: "Thanksgiving Break", date: new Date(2025, 10, 24) },
+        { name: "Winter Break", date: new Date(2025, 11, 22) },
+        { name: "Mardi Gras Break", date: new Date(2026, 1, 13) },
+        { name: "Spring Break", date: new Date(2026, 3, 3) },
+      ];
+    </script>
+  </head>
+
+  <body
+    class="bg-gradient-to-br from-gray-100 to-gray-300 min-h-screen flex items-center justify-center p-6"
+  >
+    <div
+      class="bg-white/70 backdrop-blur-sm p-6 rounded-3xl shadow-xl max-w-md w-full text-center border border-gray-200"
+    >
+      <!-- Top row: SVG left, title right -->
+      <div class="flex items-center justify-center gap-4 mb-6">
+        <!-- SVG -->
+        <div class="flex-shrink-0">
+          <img
+            src="pics/greatDay.svg"
+            class="w-28 float"
+            alt="Have a Great Day"
+          />
+        </div>
+
+        <!-- Title text -->
+        <div class="text-left">
+          <h1 class="text-3xl font-bold text-gray-800 leading-tight">
+            School Days<br />Remaining
+          </h1>
+        </div>
+      </div>
+
+      <!-- NEXT BREAK -->
+      <div class="bg-white border border-gray-200 p-4 rounded-2xl shadow mb-6">
+        <p class="text-lg text-gray-700">
+          <span class="text-4xl align-middle">🏖️</span> Next Break
+        </p>
+        <p id="break-name" class="text-gray-800 font-semibold"></p>
+        <p id="break-date" class="text-gray-500 text-xs mb-2"></p>
+        <div id="break-days" class="text-6xl font-bold text-gray-800">--</div>
+        <p class="text-gray-600 text-sm">school days remaining</p>
+      </div>
+
+      <!-- LAST DAY OF SCHOOL -->
+      <div class="bg-white border border-gray-200 p-4 rounded-2xl shadow mb-6">
+        <p class="text-lg text-gray-700">
+          <span class="text-4xl align-middle">📚</span> Last Day of School
+        </p>
+        <p id="school-date" class="text-gray-500 text-xs mb-2"></p>
+        <div id="school-days" class="text-6xl font-bold text-gray-800">--</div>
+        <p class="text-gray-600 text-sm">school days remaining</p>
+      </div>
+
+      <!-- SENIOR LAST DAY -->
+      <div class="bg-white border border-gray-200 p-4 rounded-2xl shadow mb-6">
+        <p class="text-lg text-gray-700">
+          <span class="text-4xl align-middle">🎓</span> Last Day for Seniors
+        </p>
+        <p id="senior-date" class="text-gray-500 text-xs mb-2"></p>
+        <div id="senior-days" class="text-6xl font-bold text-gray-800">--</div>
+        <p class="text-gray-600 text-sm">school days remaining</p>
+      </div>
+
+      <!-- PROGRESS BAR -->
+      <div class="w-full bg-gray-300 rounded-full h-3 mb-2">
+        <div
+          id="progress"
+          class="h-3 bg-gray-600 rounded-full transition-all duration-700"
+        ></div>
+      </div>
+
+      <p id="progress-text" class="text-gray-700 text-xs mb-4">Loading...</p>
+
+      <p id="fun-message" class="text-gray-800 text-lg font-semibold">
+        Calculating...
+      </p>
+    </div>
+
+    <script>
+      function isWeekend(date) {
+        return date.getDay() === 0 || date.getDay() === 6;
+      }
+      function isHoliday(date) {
+        return SETTINGS.holidays.some(
+          (h) =>
+            h.getFullYear() === date.getFullYear() &&
+            h.getMonth() === date.getMonth() &&
+            h.getDate() === date.getDate(),
+        );
+      }
+      function isSchoolDay(date) {
+        return !isWeekend(date) && !isHoliday(date);
+      }
+      function countSchoolDays(start, end) {
+        let c = 0,
+          d = new Date(start);
+        while (d <= end) {
+          if (isSchoolDay(d)) c++;
+          d.setDate(d.getDate() + 1);
+        }
+        return c;
+      }
+      function getNextBreak() {
+        const today = new Date();
+        return (
+          BREAKS.filter((b) => b.date >= today).sort(
+            (a, b) => a.date - b.date,
+          )[0] || null
+        );
+      }
+      function schoolDaysUntil(date) {
+        const t = new Date();
+        t.setHours(0, 0, 0, 0);
+        if (t > date) return 0;
+        const tm = new Date(t);
+        tm.setDate(tm.getDate() + 1);
+        return countSchoolDays(tm, date);
+      }
+      function funMessage(days) {
+        if (days === 0) return "🎉 SCHOOL'S OUT!";
+        if (days <= 1) return "🎊 Last day is tomorrow!";
+        if (days <= 5) return "🔥 Single digits!";
+        if (days <= 10) return "🚀 Almost there!";
+        if (days <= 20) return "⭐ Under 20 days!";
+        return "🎒 Summer is coming!";
+      }
+      function update() {
+        const nextBreak = getNextBreak();
+        if (nextBreak) {
+          document.getElementById("break-name").textContent = nextBreak.name;
+          document.getElementById("break-date").textContent =
+            nextBreak.date.toDateString();
+          document.getElementById("break-days").textContent = schoolDaysUntil(
+            nextBreak.date,
+          );
+        }
+
+        const schoolEnd = SETTINGS.schoolLastDay;
+        const seniorEnd = SETTINGS.seniorLastDay;
+
+        document.getElementById("school-date").textContent =
+          schoolEnd.toDateString();
+        document.getElementById("senior-date").textContent =
+          seniorEnd.toDateString();
+
+        const sd = schoolDaysUntil(schoolEnd);
+        const snd = schoolDaysUntil(seniorEnd);
+
+        document.getElementById("school-days").textContent = sd;
+        document.getElementById("senior-days").textContent = snd;
+
+        const total = countSchoolDays(SETTINGS.schoolStart, schoolEnd);
+        const completed = total - sd;
+        const pct = Math.round((completed / total) * 100);
+
+        document.getElementById("progress").style.width = pct + "%";
+        document.getElementById("progress-text").textContent =
+          pct + "% complete";
+
+        document.getElementById("fun-message").textContent = funMessage(sd);
+      }
+
+      update();
+      setInterval(update, 60000);
+    </script>
+  </body>
+</html>

@@ -1,153 +1,197 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>Ms. Kelley's Coding Adventures</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ms. Kelley’s Coding Adventures</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <div class="container">
-      <div class="header">
-        <nav>
-          <h1>Ms. Kelley's Coding Adventures</h1>
-          <ul id="nav-ul">
-            <li><a href="index.html">Home</a></li>
-            <li class="nav-li">
-              <a href="portfolio.html">Portfolio</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="menu">
-        <img src="pics/Ms.KelleyLego.JPG" width="250" alt="Profile Pic" />
-      </div>
-      <div class="content">
-        <h2>Ms. Laura Kelley</h2>
-        <p>Teacher with 5+ years of experience teaching young adults.</p>
 
-        <!-- Interests section -->
-        <div id="interests">
-          <h3>Interests</h3>
-          <ul>
-            <li>Reading</li>
-            <li>Sewing</li>
-            <li>Crochet & Knitting</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer">
-        <h3>Ms. Kelley in Photos</h3>
-        <div class="gallery">
-          <a target="_blank" href="pics/LauraScadGrad.JPG">
-            <img
-              src="pics/LauraScadGrad.JPG"
-              alt="LauraScadGrad"
-              height="600"
-            />
-          </a>
-          <div class="desc">
-            I recieved my Master of Arts from SCAD in Georgia.
+  <body class="bg-blue-50 text-gray-800 font-sans p-6">
+    <!-- NAVIGATION -->
+    <nav
+      class="bg-blue-500 text-white p-4 flex justify-between items-center rounded-lg shadow-md mb-8"
+    >
+      <h1 class="text-2xl font-bold">Ms. Kelley’s Coding Adventures</h1>
+      <ul class="flex space-x-4">
+        <li><a href="index.html" class="hover:text-blue-200">Home</a></li>
+        <li>
+          <a href="portfolio.html" class="hover:text-blue-200">Portfolio</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="max-w-4xl mx-auto space-y-8">
+      <!-- PROFILE SECTION -->
+      <section
+        class="bg-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row gap-6"
+      >
+        <img
+          src="pics/Ms.KelleyLego.JPG"
+          alt="Profile picture of Ms. Kelley"
+          class="w-60 h-auto rounded-lg shadow"
+        />
+
+        <div class="space-y-3">
+          <h2 class="text-2xl font-semibold">Ms. Laura Kelley</h2>
+          <p>Teacher with 5+ years of experience teaching young adults.</p>
+
+          <div>
+            <h3 class="font-semibold text-lg">Interests</h3>
+            <ul class="list-disc list-inside">
+              <li>Reading</li>
+              <li>Sewing</li>
+              <li>Crochet & Knitting</li>
+            </ul>
           </div>
         </div>
+      </section>
 
-        <div class="gallery">
-          <a target="_blank" href="pics/GavinAngel.JPG">
-            <img src="pics/GavinAngel.JPG" alt="GavinAngel" height="332" />
-          </a>
-          <div class="desc">
-            My Son Gavin <br />
-            7/18/11 - 6/25/12
+      <!-- PHOTO GALLERY -->
+      <section class="bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-xl font-semibold mb-4">
+          Ms. Kelley's Memorable Photos'
+        </h3>
+
+        <!-- 3-column grid on md+, 2-column on small screens, 1-column on very small -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <!-- Gallery item template -->
+          <div>
+            <a href="pics/LauraScadGrad.JPG" target="_blank">
+              <img
+                src="pics/LauraScadGrad.JPG"
+                alt="SCAD graduation"
+                class="rounded-lg shadow"
+              />
+            </a>
+            <p class="mt-3 text-base font-medium text-gray-700">
+              I received my Master of Arts from SCAD in Georgia.
+            </p>
+          </div>
+
+          <div>
+            <a href="pics/GavinAngel.JPG" target="_blank">
+              <img
+                src="pics/GavinAngel.JPG"
+                alt="Gavin Angel"
+                class="rounded-lg shadow"
+              />
+            </a>
+            <p class="mt-3 text-base font-medium text-gray-700">
+              My son Gavin<br />7/18/11 – 6/25/12
+            </p>
+          </div>
+
+          <div>
+            <a href="pics/LauraClaire2025.JPG" target="_blank">
+              <img
+                src="pics/LauraClaire2025.JPG"
+                alt="Laura and Claire 2025"
+                class="rounded-lg shadow"
+              />
+            </a>
+            <p class="mt-3 text-base font-medium text-gray-700">
+              My daughter and me, Spring 2025
+            </p>
+          </div>
+
+          <div>
+            <a href="pics/LilyKateonDesk.JPG" target="_blank">
+              <img
+                src="pics/LilyKateonDesk.JPG"
+                alt="LilyKate the cat"
+                class="rounded-lg shadow"
+              />
+            </a>
+            <p class="mt-3 text-base font-medium text-gray-700">
+              LilyKate, our COVID kitty — adopted Feb. 2021
+            </p>
+          </div>
+
+          <div>
+            <a href="pics/ClaireLilyKateSnow.jpg" target="_blank">
+              <img
+                src="pics/ClaireLilyKateSnow.jpg"
+                alt="Claire and LilyKate in the snow"
+                class="rounded-lg shadow"
+              />
+            </a>
+            <p class="mt-3 text-base font-medium text-gray-700">
+              Claire and LilyKate, Jan. 2025
+            </p>
+          </div>
+
+          <div>
+            <a href="pics/40thBday.jpg" target="_blank">
+              <img
+                src="pics/40thBday.jpg"
+                alt="Milestone birthday trip"
+                class="rounded-lg shadow"
+              />
+            </a>
+            <p class="mt-3 text-base font-medium text-gray-700">
+              For a milestone birthday, I went to my happy place…
+            </p>
+          </div>
+
+          <div>
+            <a href="pics/sibilings.jpg" target="_blank">
+              <img
+                src="pics/sibilings.jpg"
+                alt="Siblings enjoying crawfish"
+                class="rounded-lg shadow"
+              />
+            </a>
+            <p class="mt-3 text-base font-medium text-gray-700">
+              My brother, sister, and me enjoying crawfish — my favorite food.
+            </p>
+          </div>
+
+          <div>
+            <a href="pics/grandkids.jpg" target="_blank">
+              <img
+                src="pics/grandkids.jpg"
+                alt="Nieces and nephews"
+                class="rounded-lg shadow"
+              />
+            </a>
+            <p class="mt-3 text-base font-medium text-gray-700">
+              My siblings, nieces, and nephews.
+            </p>
+          </div>
+
+          <div>
+            <a href="pics/KnittedBlanket.JPG" target="_blank">
+              <img
+                src="pics/KnittedBlanket.JPG"
+                alt="Knitted blanket"
+                class="rounded-lg shadow"
+              />
+            </a>
+            <p class="mt-3 text-base font-medium text-gray-700">
+              A blanket I knitted in 2012.
+            </p>
+          </div>
+
+          <div>
+            <a href="pics/ChipmunkCrochet.JPG" target="_blank">
+              <img
+                src="pics/ChipmunkCrochet.JPG"
+                alt="Crocheted chipmunk"
+                class="rounded-lg shadow"
+              />
+            </a>
+            <p class="mt-3 text-base font-medium text-gray-700">
+              I have recently begun crocheting amigurumi.
+            </p>
           </div>
         </div>
-
-        <div class="gallery">
-          <a target="_blank" href="pics/LauraClaire2025.JPG">
-            <img
-              src="pics/LauraClaire2025.JPG"
-              alt="LauraClaire2025"
-              height="332"
-            />
-          </a>
-          <div class="desc">My daughter and Me, Spring 2025</div>
-        </div>
-
-        <div class="gallery">
-          <a target="_blank" href="pics/LilyKateonDesk.JPG">
-            <img
-              src="pics/LilyKateonDesk.JPG"
-              alt="LilyKateonDesk"
-              height="332"
-            />
-          </a>
-          <div class="desc">
-            LilyKate is our COVID kitty. We adopted her Feb. 2021
-          </div>
-        </div>
-        <div class="gallery">
-          <a target="_blank" href="pics/ClaireLilyKateSnow.jpg">
-            <img
-              src="pics/ClaireLilyKateSnow.jpg"
-              alt="ClaireLilyKateSnow"
-              height="600"
-            />
-          </a>
-          <div class="desc">Claire and LilyKate Jan. 2025</div>
-        </div>
-
-        <div class="gallery">
-          <a target="_blank" href="pics/40thBday.jpg">
-            <img
-              src="pics/40thBday.jpg"
-              alt="milestone birthday"
-              height="600 "
-            />
-          </a>
-          <div class="desc">
-            For a milestone birthday I went to my happy place...
-          </div>
-        </div>
-        <div class="gallery">
-          <a target="_blank" href="pics/sibilings.jpg">
-            <img
-              src="pics/sibilings.jpg"
-              alt="Crawfish with Sibilings"
-              height="600"
-            />
-          </a>
-          <div class="desc">
-            My brother, sister, and myself enjoying crawfish. My favorite food.
-          </div>
-        </div>
-        <div class="gallery">
-          <a target="_blank" href="pics/grandkids.jpg">
-            <img
-              src="pics/grandkids.jpg"
-              alt="Neices and Nephews"
-              height="600"
-            />
-          </a>
-          <div class="desc">My sibilings, neices, and nephews.</div>
-        </div>
-        <div class="gallery">
-          <a target="_blank" href="pics/KnittedBlanket.JPG">
-            <img
-              src="pics/KnittedBlanket.JPG"
-              alt="LauraClaire2025"
-              height="332"
-            />
-          </a>
-          <div class="desc">This is a blaket I knit in 2012</div>
-        </div>
-        <div class="gallery">
-          <a target="_blank" href="pics/ChipmunkCrochet.JPG">
-            <img
-              src="pics/ChipmunkCrochet.JPG"
-              alt="ChipmunkCrochet"
-              height="332"
-            />
-          </a>
-          <div class="desc">I have recently begun crocheting amigurumi</div>
-        </div>
-      </div>
+      </section>
     </div>
+
+    <!-- FOOTER -->
+    <footer class="text-center text-sm text-gray-500 mt-12">
+      © 2026 Ms. Kelley
+    </footer>
   </body>
 </html>
