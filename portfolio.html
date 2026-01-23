@@ -1,15 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Ms. Kelley's Portfolio</title>
-    <!--<link rel="stylesheet" href="style.css" /> -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
 
   <body class="bg-blue-50 text-gray-800 p-4 font-sans">
-    <!-- All content goes here -->
     <div id="all-contents" class="max-w-4xl mx-auto">
+      <!-- NAVIGATION -->
       <nav class="bg-blue-500 p-4 rounded-lg mb-4 shadow-md">
         <div class="flex justify-between items-center">
           <h1 class="text-white text-2xl font-bold">Ms. Kelley's Portfolio</h1>
@@ -30,96 +29,142 @@
             </li>
           </ul>
         </div>
-
-        <main class="bg-white rounded-lg shadow-lg p-6">
-          <div class="flex flex-col md:flex-row gap-6">
-            <ul id="portfolio">
-              <div class="border-0 border-gray-300 rounded-lg p-4">
-                <h3 class="text-xl font-semibold mb-3 text-gray-800">
-                  Portfolio
-                  <h3 class="text-xl font-semibold mb-3 text-gray-800">
-                    
-                    <li class="bg-blue-100 px-3 py-2 rounded text-blue-800">
-                    <a href="asd-projects/data-shapesBlank/">
-                      Data Shapes IN PROGRESS: <br />
-                      practice with patterns</a
-                    Fundamentals Projects
-                  </h3>
-                </h3>
-                <ul class="space-y-2">
-                  <li class="bg-blue-100 px-3 py-2 rounded text-blue-800">
-                    <a href="fsd-projects/platformer/"
-                      >Platformer: <br />
-                      A cannon-dodging adventure game for Halleb0t</a
-                    >
-                  </li>
-                  <li class="bg-blue-100 px-3 py-2 rounded text-blue-800">
-                    <a href="fsd-projects/bouncing-box/"
-                      >Bouncing Box: <br />A fun introduction to web game
-                      development</a
-                    >
-                  </li>
-                  <li class="bg-blue-100 px-3 py-2 rounded text-blue-800">
-                    <a href="fsd-projects/circularity/"
-                      >Circularity: <br />
-                      A poetic motion experiment with circles</a
-                    >
-                  </li>
-
-                  <h3 class="text-xl font-semibold mb-3 text-gray-800">
-                    Advanced Projects
-                  </h3>
-                  <li class="bg-blue-100 px-3 py-2 rounded text-blue-800">
-                    <a href="asd-projects/data-shapes">
-                      Data Shapes: <br />
-                      practice with patterns</a
-                    >
-                  </li>
-                  <li class="bg-blue-100 px-3 py-2 rounded text-blue-800">
-                    <a href="asd-projects/debugging-exercise">
-                      Debugging Exercise:<br />
-                      A debugging exercise</a
-                    >
-                  </li>
-                  <li class="bg-blue-100 px-3 py-2 rounded text-blue-800">
-                    <a href="asd-projects/snake"
-                      >Snake: <br />Feed the snake or be fed upon</a
-                    >
-                  </li>
-                  <li class="bg-blue-100 px-3 py-2 rounded text-blue-800">
-                    <a href="asd-projects/walker"
-                      >Walker: <br />Practice user input by animating walking
-                      boxes</a
-                    >
-                  </li>
-                  <li class="bg-blue-100 px-3 py-2 rounded text-blue-800">
-                    <a href="asd-projects/image-filtering"
-                      >Image Filtering: <br />Filter images using loops</a
-                    >
-                  </li>
-                  <li class="bg-blue-100 px-3 py-2 rounded text-blue-800">
-                    <a href="asd-projects/sorting"
-                      >Sorting Exercise: <br />An exercise on sorting
-                      algorithms</a
-                    >
-                  </li>
-
-                  <h3 class="text-xl font-semibold mb-3 text-gray-800">
-                    Mini Projects
-                  </h3>
-
-                  <li class="bg-blue-100 px-3 py-2 rounded text-blue-800">
-                    <a href="asd-projects/dice-app">
-                      Dice App:<br />
-                      A simple, interactive dice app built using jQuery</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </ul>
-          </div>
-        </main>
       </nav>
+
+      <!-- MAIN CONTENT -->
+      <main class="bg-white rounded-lg shadow-lg p-6">
+        <h2 class="text-2xl font-bold mb-4">Portfolio</h2>
+
+        <!-- BEGIN PORTFOLIO LIST -->
+        <ul id="portfolio" class="space-y-6">
+          <!-- Data Shapes -->
+          <li class="border border-gray-300 rounded-lg p-4">
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">
+              Data Shapes (In Progress)
+            </h3>
+            <a
+              href="asd-projects/data-shapesBlank/"
+              class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
+            >
+              Data Shapes Practice with Patterns
+            </a>
+          </li>
+
+          <!-- Fundamentals Projects -->
+          <li class="border border-gray-300 rounded-lg p-4">
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">
+              Fundamentals Projects
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="fsd-projects/platformer/"
+                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
+                >
+                  Platformer:<br />A cannon-dodging adventure game for Halleb0t
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="fsd-projects/bouncing-box/"
+                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
+                >
+                  Bouncing Box:<br />A fun introduction to web game development
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="fsd-projects/circularity/"
+                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
+                >
+                  Circularity:<br />A poetic motion experiment with circles
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Advanced Projects -->
+          <li class="border border-gray-300 rounded-lg p-4">
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">
+              Advanced Projects
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="asd-projects/data-shapes"
+                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
+                  >Data Shapes</a
+                >
+              </li>
+              <li>
+                <a
+                  href="asd-projects/debugging-exercise"
+                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
+                  >Debugging Exercise</a
+                >
+              </li>
+              <li>
+                <a
+                  href="asd-projects/snake"
+                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
+                  >Snake</a
+                >
+              </li>
+              <li>
+                <a
+                  href="asd-projects/walker"
+                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
+                  >Walker</a
+                >
+              </li>
+              <li>
+                <a
+                  href="asd-projects/image-filtering"
+                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
+                  >Image Filtering</a
+                >
+              </li>
+              <li>
+                <a
+                  href="asd-projects/sorting"
+                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
+                  >Sorting Exercise</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <!-- Mini Projects -->
+          <li class="border border-gray-300 rounded-lg p-4">
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">
+              Mini Projects
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="asd-projects/dice-app"
+                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
+                >
+                  Dice App:<br />A simple, interactive dice app built using
+                  jQuery
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://lkelley212.my.canva.site/schoolcountdown"
+                  class="bg-blue-100 px-3 py-2 rounded text-blue-800 block"
+                >
+                  School Countdown:<br />A simple countdown widget made with
+                  Canva Code
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </main>
     </div>
   </body>
 </html>
