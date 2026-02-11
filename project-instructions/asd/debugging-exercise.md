@@ -260,7 +260,6 @@ These will be your primary tools for navigating the code frame-by-frame.
 
 1. Remove your previous breakpoint (line 92) by clicking it again in the **Sources** tab.
 2. In the `update` function, examine the three function calls:
-
    - `moveGhost(...)`
    - `bounceGhost(...)`
    - `updateGhostOnScreen(...)`
@@ -313,7 +312,6 @@ These will be your primary tools for navigating the code frame-by-frame.
 
 1. Start with a clean slate by removing any previous breakpoints.
 2. Return to the `update` function and once again examine the three key function calls:
-
    - `moveGhost(...)`
    - `bounceGhost(...)`
    - `updateGhostOnScreen(...)`
