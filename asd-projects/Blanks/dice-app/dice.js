@@ -5,7 +5,8 @@ $(document).ready(function () {
     .css("width", 75)
     .css("background-color", "#3457D5")
     .css("position", "absolute")
-    .css("top", 200)
-    .css("left", 200)
+    .css("top", 212.5)
+    .css("left", 212.5)
+    // .css("border-radius", "50%")
     .appendTo("#die");
 });
