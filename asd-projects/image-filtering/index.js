@@ -63,7 +63,7 @@ function applyFilterNoBackground(filterFunction) {
   for (var i = 0; i < image.length; i++) {
     for (var j = 0; j < image[i].length; j++) {
       var pixel = image[i][j];
-      // If the pixel array is not equal to the background color, apply the filter
+      // If the pixel string is not equal to the background color, apply the filter
       if (pixel !== backgroundColor) {
         var pixelArray = rgbStringToArray(pixel);
         filterFunction(pixelArray);
@@ -76,7 +76,7 @@ function applyFilterNoBackground(filterFunction) {
 
 // TODO 6: Create the keepInBounds function
 function keepInBounds(num) {
-  return num < 0 ? (num = 0) : num > 255 ? 255 : num;
+  return num < 0 ? 0 : num > 255 ? 255 : num;
 }
 
 /* console.log(keepInBounds(-20)); // should print 0
@@ -90,11 +90,11 @@ function reddify(colorArray) {
 
 // TODO 7 & 8: Create more filter functions
 function decreaseBlue(colorArray) {
-  colorArray[BLUE] = colorArray[BLUE] - 50;
-  keepInBounds(colorArray[BLUE]);
+  colorArray[BLUE] = keepInBounds(colorArray[BLUE] - 50);
+  // keepInBounds(colorArray[BLUE]);
 }
 function increaseGreenByBlue(colorArray) {
-  colorArray[GREEN] = colorArray[GREEN] + colorArray[BLUE];
-  keepInBounds(colorArray[GREEN]);
+  colorArray[GREEN] = keepInBounds(colorArray[GREEN] + colorArray[BLUE]);
+  // keepInBounds(colorArray[GREEN]);
 }
 // CHALLENGE code goes below here
