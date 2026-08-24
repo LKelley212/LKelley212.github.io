@@ -80,19 +80,19 @@ function runProgram() {
   function handleKeyUp(event) {
     if (event.which === KEY.LEFT) {
       walker.speedX = 0;
-      console.log("left pressed");
+      console.log("left released");
     }
     if (event.which === KEY.UP) {
       walker.speedY = 0;
-      console.log("up pressed");
+      console.log("up released");
     }
     if (event.which === KEY.RIGHT) {
       walker.speedX = 0;
-      console.log("right pressed");
+      console.log("right released");
     }
     if (event.which === KEY.DOWN) {
       walker.speedY = 0;
-      console.log("down pressed");
+      console.log("down released");
     }
   }
   ////////////////////////////////////////////////////////////////////////////////
@@ -116,7 +116,7 @@ function runProgram() {
     if (walker.y < 0) {
       walker.y -= walker.speedY;
     }
-    if (walker.y + 50 > $("#board").width()) {
+    if (walker.y + 50 > $("#board").height()) {
       walker.y -= walker.speedY;
     }
   }

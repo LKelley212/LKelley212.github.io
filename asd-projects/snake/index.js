@@ -171,13 +171,13 @@ function hasHitWall() {
   if (snake.head.row < 0) {
     return true;
   }
-  if (snake.head.row >= ROWS) {
+  if (snake.head.row > ROWS) {
     return true;
   }
   if (snake.head.column < 0) {
     return true;
   }
-  if (snake.head.column >= COLUMNS) {
+  if (snake.head.column > COLUMNS) {
     return true;
   } else {
     return false;
